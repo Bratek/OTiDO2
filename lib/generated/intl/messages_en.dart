@@ -24,6 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "app_name": MessageLookupByLibrary.simpleMessage("OTiDO"),
         "dobro_pozhalovat": MessageLookupByLibrary.simpleMessage("Welcome!"),
-        "registration": MessageLookupByLibrary.simpleMessage("Registration")
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "registration": MessageLookupByLibrary.simpleMessage("Registration"),
+        "zaregistrirovat": MessageLookupByLibrary.simpleMessage("Register")
       };
 }

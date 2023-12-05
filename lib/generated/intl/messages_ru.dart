@@ -25,6 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "app_name": MessageLookupByLibrary.simpleMessage("ОТиДО"),
         "dobro_pozhalovat":
             MessageLookupByLibrary.simpleMessage("Добро пожаловать!"),
-        "registration": MessageLookupByLibrary.simpleMessage("Регистрация")
+        "email": MessageLookupByLibrary.simpleMessage("Эл.почта"),
+        "password": MessageLookupByLibrary.simpleMessage("Пароль"),
+        "registration": MessageLookupByLibrary.simpleMessage("Регистрация"),
+        "zaregistrirovat":
+            MessageLookupByLibrary.simpleMessage("Зарегистрировать")
       };
 }

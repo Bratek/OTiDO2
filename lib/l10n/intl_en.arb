@@ -1,5 +1,8 @@
 {
   "app_name": "OTiDO",
   "dobro_pozhalovat": "Welcome!",
-  "registration": "Registration"
+  "email": "Email",
+  "password": "Password",
+  "registration": "Registration",
+  "zaregistrirovat": "Register"
 }

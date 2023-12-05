@@ -32,9 +32,11 @@ InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
 
 TextTheme textTheme = TextTheme(
   //Заголовки
-  titleMedium: titleTextStyle,
+  headlineMedium: titleTextStyle,
   // текст в textField
   bodyMedium: bodyTextStyle,
+  // текст в кнопке
+  labelLarge: buttonTextStyle,
   // текст в label
   labelMedium: labelTextStyle,
 );
@@ -55,4 +57,10 @@ TextStyle labelTextStyle = TextStyle(
   color: themeColors.medium,
   fontSize: 22,
   fontWeight: FontWeight.normal,
+);
+
+TextStyle buttonTextStyle = TextStyle(
+  color: themeColors.opposite,
+  fontSize: 24,
+  fontWeight: FontWeight.bold,
 );

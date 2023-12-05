@@ -70,11 +70,41 @@ class S {
     );
   }
 
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Registration`
   String get registration {
     return Intl.message(
       'Registration',
       name: 'registration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register`
+  String get zaregistrirovat {
+    return Intl.message(
+      'Register',
+      name: 'zaregistrirovat',
       desc: '',
       args: [],
     );

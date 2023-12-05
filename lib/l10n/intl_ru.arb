@@ -1,5 +1,8 @@
 {
   "app_name": "ОТиДО",
   "dobro_pozhalovat": "Добро пожаловать!",
-  "registration": "Регистрация"
+  "email": "Эл.почта",
+  "password": "Пароль",
+  "registration": "Регистрация",
+  "zaregistrirovat": "Зарегистрировать"
 }
