@@ -9,7 +9,7 @@ Widget wLogo(BuildContext context) {
   }
   return Image.asset(
     imgPath,
-    height: 85,
-    width: 83,
+    height: 64,
+    width: 62,
   );
 }
