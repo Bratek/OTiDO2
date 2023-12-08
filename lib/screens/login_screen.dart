@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:otido2/generated/l10n.dart';
 import 'package:otido2/helper.dart';
-import 'package:otido2/themes/theme_colors.dart';
 import 'package:otido2/widgets/widget_button.dart';
 //import 'package:otido2/themes/theme_colors.dart';
 import 'package:otido2/widgets/widget_title.dart';
@@ -27,7 +26,7 @@ class LoginScreen extends StatelessWidget {
               vSpace(60),
               wTextField(context, label: S.of(context).email),
               wTextField(context, label: S.of(context).password, obscure: true),
-              vSpace(80),
+              vSpace(100),
               wButton(context, label: S.of(context).zaregistrirovat),
               vSpace(30),
               TextButton(
