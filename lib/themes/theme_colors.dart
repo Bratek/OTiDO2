@@ -34,4 +34,5 @@ class ThemeColors {
   Color get opposite =>
       light == Brightness.light ? Color(0xFF523F2C) : Color(0xFFF0EAE3);
   Color get accent => Color(0xFFEE7700);
+  Color get sameLight => Color(0xFFFCF5ED);
 }

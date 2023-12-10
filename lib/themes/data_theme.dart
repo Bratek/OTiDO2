@@ -43,6 +43,8 @@ class DataTheme {
         titleSmall: textButtonStyle,
         // текст подсказки
         labelMedium: labelTextStyle,
+        // текст гос.номера
+        labelSmall: textNumberStyle,
         // текст в textField
         bodyMedium: bodyTextStyle,
         // текст с информацией
@@ -81,6 +83,12 @@ class DataTheme {
 
   TextStyle get textButtonStyle => TextStyle(
         color: themeColors.medium,
+        fontSize: 18,
+        fontWeight: FontWeight.normal,
+      );
+
+  TextStyle get textNumberStyle => TextStyle(
+        color: Colors.black,
         fontSize: 18,
         fontWeight: FontWeight.normal,
       );

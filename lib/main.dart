@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:otido2/generated/l10n.dart';
 import 'package:otido2/screens/login_screen.dart';
+import 'package:otido2/screens/main_screen.dart';
 import 'package:otido2/themes/theme_dark.dart';
 import 'package:otido2/themes/theme_light.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: const [
         Locale('ru'),
       ],
-      home: const LoginScreen(),
+      home: const MainScreen(), //LoginScreen(),
     );
   }
 }

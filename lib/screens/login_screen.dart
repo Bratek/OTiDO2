@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:otido2/generated/l10n.dart';
 import 'package:otido2/helper.dart';
 import 'package:otido2/widgets/widget_button.dart';
-//import 'package:otido2/themes/theme_colors.dart';
 import 'package:otido2/widgets/widget_title.dart';
 import 'package:otido2/widgets/widget_text_field.dart';
 import '../widgets/widget_logo.dart';
