@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:otido2/themes/theme_colors.dart';
+import 'package:otido2/themes/data_theme.dart';
 
 Widget wButton(BuildContext context,
     {String label = '', Function()? onPressed}) {
-  ThemeColors themeColors = ThemeColors(Theme.of(context).brightness);
+  //ThemeColors themeColors = ThemeColors(Theme.of(context).brightness);
+  ThemeData appTheme = Theme.of(context);
   return GestureDetector(
     onTap: onPressed ?? () {},
     child: Padding(
@@ -14,11 +15,11 @@ Widget wButton(BuildContext context,
           padding: const EdgeInsets.all(10),
           child: Text(
             label,
-            style: Theme.of(context).textTheme.titleMedium,
+            style: appTheme.textTheme.title,
           ),
         ),
         style: ElevatedButton.styleFrom(
-          backgroundColor: themeColors.accent,
+          backgroundColor: appTheme.colorScheme.accentColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),

@@ -1,8 +1,16 @@
 {
+  "about": "О приложении",
   "app_name": "ОТиДО",
   "dobro_pozhalovat": "Добро пожаловать!",
   "email": "Эл.почта",
+  "feedback": "Обратная связь",
+  "garage": "Гараж",
+  "mail": "email@mail.ru",
   "password": "Пароль",
+  "profile": "Профиль",
   "registration": "Регистрация",
+  "settings": "Настройки",
+  "sign_out": "Выход",
+  "user_name": "Фамилия Имя",
   "zaregistrirovat": "Зарегистрировать"
 }

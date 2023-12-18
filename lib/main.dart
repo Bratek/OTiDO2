@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:otido2/generated/l10n.dart';
-import 'package:otido2/screens/login_screen.dart';
+import 'package:otido2/helper.dart';
+
+//import 'package:otido2/screens/login_screen.dart';
 import 'package:otido2/screens/main_screen.dart';
-import 'package:otido2/themes/theme_dark.dart';
-import 'package:otido2/themes/theme_light.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: lightTheme,
-      darkTheme: darkTheme,
+      theme: dataTheme(Brightness.light),
+      darkTheme: dataTheme(Brightness.dark),
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: const [
         Locale('ru'),
       ],
-      home: const MainScreen(), //LoginScreen(),
+      home: const MainScreen(),
     );
   }
 }

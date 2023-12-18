@@ -16,7 +16,11 @@ Widget wGosNumber(BuildContext context, String number, String region) {
             child: Center(
               child: Text(
                 number,
-                style: Theme.of(context).textTheme.labelSmall,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                ),
               ),
             ),
           ),
@@ -32,7 +36,11 @@ Widget wGosNumber(BuildContext context, String number, String region) {
             child: Center(
               child: Text(
                 region,
-                style: Theme.of(context).textTheme.labelSmall,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                ),
               ),
             ),
           ),

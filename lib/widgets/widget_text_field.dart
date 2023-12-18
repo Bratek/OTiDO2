@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:otido2/themes/data_theme.dart';
 
 Widget wTextField(BuildContext context,
     {TextEditingController? controller,
@@ -6,7 +7,7 @@ Widget wTextField(BuildContext context,
     bool obscure = false}) {
   return TextField(
     controller: controller,
-    style: Theme.of(context).textTheme.bodyMedium,
+    style: Theme.of(context).textTheme.body,
     decoration: InputDecoration(labelText: label),
     obscureText: obscure,
   );

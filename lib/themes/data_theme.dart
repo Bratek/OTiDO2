@@ -1,95 +1,133 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:otido2/themes/theme_colors.dart';
 
-class DataTheme {
-  Brightness brightness;
-  late ThemeColors themeColors;
+late ThemeColors _themeColors;
 
-  DataTheme(this.brightness) {
-    themeColors = ThemeColors(brightness);
-  }
-
-  ThemeData get theme => ThemeData(
-        brightness: brightness,
-        scaffoldBackgroundColor: themeColors.background,
-        textSelectionTheme: textSelectionThemeData,
-        inputDecorationTheme: inputDecorationTheme,
-        indicatorColor: themeColors.accent,
-        textTheme: textTheme,
-      );
-
-  InputDecorationTheme get inputDecorationTheme => InputDecorationTheme(
-      labelStyle: labelTextStyle,
-      hintStyle: bodyTextStyle,
-      enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: themeColors.medium, width: 1)),
-      focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: themeColors.accent, width: 2)),
-      activeIndicatorBorder: BorderSide(color: themeColors.accent, width: 2),
-      contentPadding: const EdgeInsets.only(top: 8, bottom: 8));
-
-  TextSelectionThemeData get textSelectionThemeData => TextSelectionThemeData(
-        cursorColor: themeColors.accent,
-        selectionColor: themeColors.accent,
-        selectionHandleColor: themeColors.accent,
-      );
-
-  TextTheme get textTheme => TextTheme(
-        //Заголовки
-        headlineMedium: titleTextStyle,
-        // текст в кнопке
-        titleMedium: buttonTextStyle,
-        // текстовая кнопка
-        titleSmall: textButtonStyle,
-        // текст подсказки
-        labelMedium: labelTextStyle,
-        // текст гос.номера
-        labelSmall: textNumberStyle,
-        // текст в textField
-        bodyMedium: bodyTextStyle,
-        // текст с информацией
-        bodySmall: infoTextStyle,
-      );
-
-  TextStyle get titleTextStyle => TextStyle(
-        color: themeColors.opposite,
-        fontSize: 26,
-        fontWeight: FontWeight.bold,
-      );
-
-  TextStyle get bodyTextStyle => TextStyle(
-        color: themeColors.opposite,
-        fontSize: 20,
-        fontWeight: FontWeight.normal,
-      );
-
-  TextStyle get labelTextStyle => TextStyle(
-        color: themeColors.medium,
-        fontSize: 20,
-        fontWeight: FontWeight.normal,
-      );
-
-  TextStyle get infoTextStyle => TextStyle(
-        color: themeColors.opposite,
-        fontSize: 18,
-        fontWeight: FontWeight.normal,
-      );
-
-  TextStyle get buttonTextStyle => TextStyle(
-        color: Color(0xFFFCF5ED),
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      );
-
-  TextStyle get textButtonStyle => TextStyle(
-        color: themeColors.medium,
-        fontSize: 18,
-        fontWeight: FontWeight.normal,
-      );
-
-  TextStyle get textNumberStyle => TextStyle(
-        color: Colors.black,
-        fontSize: 18,
-        fontWeight: FontWeight.normal,
-      );
+ThemeData dataTheme(Brightness brightness) {
+  _themeColors = ThemeColors(brightness);
+  return ThemeData(
+    brightness: brightness,
+    scaffoldBackgroundColor: _themeColors.backgroundColor,
+    textSelectionTheme: textSelectionThemeData,
+    inputDecorationTheme: inputDecorationTheme,
+    indicatorColor: _themeColors.accentColor,
+    //textTheme: CustomTextTheme, //textTheme,
+    drawerTheme: drawerTheme,
+    popupMenuTheme: popupMenuTheme,
+    appBarTheme: appBarTheme,
+  );
 }
+
+//ColorScheme ========================================
+extension CustomColorScheme on ColorScheme {
+  Color get footerColor => _themeColors.footerColor;
+  Color get previousColor => _themeColors.previousColor;
+  Color get backgroundColor => _themeColors.backgroundColor;
+  Color get mediumColor => _themeColors.mediumColor;
+  Color get oppositeColor => _themeColors.oppositeColor;
+  Color get accentColor => _themeColors.accentColor;
+  Color get sameLightColor => _themeColors.sameLightColor;
+}
+
+//TextTheme ==========================================
+extension CustomTextTheme on TextTheme {
+  TextStyle get title => titleTextStyle;
+  TextStyle get titleMin => titleMinTextStyle;
+  TextStyle get body => bodyTextStyle;
+  TextStyle get info => infoTextStyle;
+  TextStyle get infoInvert => infoInvertTextStyle;
+  TextStyle get label => labelTextStyle;
+  TextStyle get button => buttonTextStyle;
+  TextStyle get popupMenu => popupMenuTextTheme;
+  TextStyle get menuItem => menuItemTextTheme;
+}
+
+TextStyle get menuItemTextTheme => TextStyle(
+    color: _themeColors.oppositeColor,
+    fontSize: 16,
+    fontWeight: FontWeight.normal);
+
+TextStyle get titleTextStyle => TextStyle(
+      color: _themeColors.oppositeColor,
+      fontSize: 26,
+      fontWeight: FontWeight.bold,
+    );
+
+TextStyle get titleMinTextStyle => TextStyle(
+      color: _themeColors.oppositeColor,
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    );
+
+TextStyle get popupMenuTextTheme => TextStyle(
+      color: Colors.black,
+      fontSize: 18,
+      fontWeight: FontWeight.normal,
+    );
+
+TextStyle get bodyTextStyle => TextStyle(
+      color: _themeColors.oppositeColor,
+      fontSize: 18,
+      fontWeight: FontWeight.normal,
+    );
+
+TextStyle get labelTextStyle => TextStyle(
+      color: _themeColors.mediumColor,
+      fontSize: 18,
+      fontWeight: FontWeight.normal,
+    );
+
+TextStyle get infoTextStyle => TextStyle(
+      color: _themeColors.oppositeColor,
+      fontSize: 16,
+      fontWeight: FontWeight.normal,
+    );
+TextStyle get infoInvertTextStyle => TextStyle(
+      color: _themeColors.backgroundColor,
+      fontSize: 16,
+      fontWeight: FontWeight.normal,
+    );
+
+TextStyle get buttonTextStyle => TextStyle(
+      color: _themeColors.sameLightColor,
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    );
+
+//Widgets Themes ==========================================
+
+DrawerThemeData get drawerTheme => DrawerThemeData(
+      backgroundColor: _themeColors.footerColor,
+    );
+
+InputDecorationTheme get inputDecorationTheme => InputDecorationTheme(
+    labelStyle: labelTextStyle,
+    hintStyle: bodyTextStyle,
+    enabledBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: _themeColors.mediumColor, width: 1)),
+    focusedBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: _themeColors.accentColor, width: 2)),
+    activeIndicatorBorder:
+        BorderSide(color: _themeColors.accentColor, width: 2),
+    contentPadding: const EdgeInsets.only(top: 8, bottom: 8));
+
+TextSelectionThemeData get textSelectionThemeData => TextSelectionThemeData(
+      cursorColor: _themeColors.accentColor,
+      selectionColor: _themeColors.accentColor,
+      selectionHandleColor: _themeColors.accentColor,
+    );
+
+PopupMenuThemeData get popupMenuTheme => PopupMenuThemeData(
+      iconColor: _themeColors.oppositeColor,
+      color: _themeColors.oppositeColor,
+      textStyle: popupMenuTextTheme,
+      position: PopupMenuPosition.under,
+    );
+
+AppBarTheme get appBarTheme => AppBarTheme(
+      backgroundColor: _themeColors.backgroundColor,
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent, //_themeColors.backgroundColor,
+      ),
+    );

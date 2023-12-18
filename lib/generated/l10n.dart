@@ -50,6 +50,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `About`
+  String get about {
+    return Intl.message(
+      'About',
+      name: 'about',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `OTiDO`
   String get app_name {
     return Intl.message(
@@ -80,6 +90,36 @@ class S {
     );
   }
 
+  /// `Feedback`
+  String get feedback {
+    return Intl.message(
+      'Feedback',
+      name: 'feedback',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Garage`
+  String get garage {
+    return Intl.message(
+      'Garage',
+      name: 'garage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `email@mail.com`
+  String get mail {
+    return Intl.message(
+      'email@mail.com',
+      name: 'mail',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Password`
   String get password {
     return Intl.message(
@@ -90,11 +130,51 @@ class S {
     );
   }
 
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Registration`
   String get registration {
     return Intl.message(
       'Registration',
       name: 'registration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign out`
+  String get sign_out {
+    return Intl.message(
+      'Sign out',
+      name: 'sign_out',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get user_name {
+    return Intl.message(
+      'Name',
+      name: 'user_name',
       desc: '',
       args: [],
     );

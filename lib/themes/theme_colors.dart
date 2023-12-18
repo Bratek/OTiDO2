@@ -23,16 +23,16 @@ class ThemeColors {
 
   ThemeColors([this.light = Brightness.light]);
 
-  Color get footer =>
+  Color get footerColor =>
       light == Brightness.light ? Color(0xFFFFFAF4) : Color(0xFF423323);
-  Color get previous =>
+  Color get previousColor =>
       light == Brightness.light ? Color(0xFFFCF5ED) : Color(0xFF71563C);
-  Color get background =>
+  Color get backgroundColor =>
       light == Brightness.light ? Color(0xFFF0EAE3) : Color(0xFF523F2C);
-  Color get medium =>
+  Color get mediumColor =>
       light == Brightness.light ? Color(0xFFA8825C) : Color(0xFFA8825C);
-  Color get opposite =>
+  Color get oppositeColor =>
       light == Brightness.light ? Color(0xFF523F2C) : Color(0xFFF0EAE3);
-  Color get accent => Color(0xFFEE7700);
-  Color get sameLight => Color(0xFFFCF5ED);
+  Color get accentColor => Color(0xFFEE7700);
+  Color get sameLightColor => Color(0xFFFCF5ED);
 }

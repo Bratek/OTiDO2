@@ -1,8 +1,16 @@
 {
+  "about": "About",
   "app_name": "OTiDO",
   "dobro_pozhalovat": "Welcome!",
   "email": "Email",
+  "feedback": "Feedback",
+  "garage": "Garage",
+  "mail": "email@mail.com",
   "password": "Password",
+  "profile": "Profile",
   "registration": "Registration",
+  "settings": "Settings",
+  "sign_out": "Sign out",
+  "user_name": "Name",
   "zaregistrirovat": "Register"
 }

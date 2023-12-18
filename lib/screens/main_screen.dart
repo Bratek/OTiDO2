@@ -1,24 +1,55 @@
 import 'package:flutter/material.dart';
-import 'package:otido2/themes/theme_colors.dart';
-import 'package:otido2/widgets/widget_gos_number.dart';
+import 'package:otido2/helper.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    ThemeColors themeColors = ThemeColors(Theme.of(context).brightness);
+    ThemeData appTheme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: themeColors.background,
-        leading: IconButton(
-          icon: Icon(Icons.reorder),
-          iconSize: 32,
-          onPressed: () {},
-        ),
-        title: wGosNumber(context, 'a 123 aa', '123'),
-        centerTitle: true,
+      appBar: _Appbar(context, appTheme),
+      drawer: wDrawer(context),
+      body: TableCalendar(
+        firstDay: DateTime.utc(2010, 10, 16),
+        lastDay: DateTime.utc(2030, 3, 14),
+        focusedDay: DateTime.now(),
       ),
+    );
+  }
+
+  AppBar _Appbar(context, ThemeData appTheme) {
+    return AppBar(
+      title: wGosNumber(context, 'a 123 aa', '123'),
+      centerTitle: true,
+      actions: [
+        PopupMenuButton(
+            icon: const Icon(Icons.more_vert),
+            itemBuilder: (BuildContext context) => [
+                  PopupMenuItem(
+                    child: Text(
+                      'Menu 1',
+                      style: appTheme.textTheme.popupMenu,
+                    ),
+                    onTap: () {},
+                  ),
+                  PopupMenuItem(
+                    child: Text(
+                      'Menu 2',
+                      style: appTheme.textTheme.popupMenu,
+                    ),
+                    onTap: () {},
+                  ),
+                  PopupMenuItem(
+                    child: Text(
+                      'Menu 3',
+                      style: appTheme.textTheme.popupMenu,
+                    ),
+                    onTap: () {},
+                  ),
+                ]),
+      ],
     );
   }
 }
