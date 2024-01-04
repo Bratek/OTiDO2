@@ -61,7 +61,7 @@ TextStyle get titleMinTextStyle => TextStyle(
     );
 
 TextStyle get popupMenuTextTheme => TextStyle(
-      color: Colors.black,
+      color: _themeColors.oppositeColor,
       fontSize: 18,
       fontWeight: FontWeight.normal,
     );
@@ -120,7 +120,9 @@ TextSelectionThemeData get textSelectionThemeData => TextSelectionThemeData(
 
 PopupMenuThemeData get popupMenuTheme => PopupMenuThemeData(
       iconColor: _themeColors.oppositeColor,
-      color: _themeColors.oppositeColor,
+      color: _themeColors.footerColor,
+      elevation: 10,
+      shadowColor: _themeColors.footerColor,
       textStyle: popupMenuTextTheme,
       position: PopupMenuPosition.under,
     );

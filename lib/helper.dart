@@ -10,6 +10,7 @@ export 'package:otido2/widgets/widget_logo.dart';
 export 'package:otido2/widgets/widget_space.dart';
 export 'package:otido2/widgets/widget_text_field.dart';
 export 'package:otido2/widgets/widget_title.dart';
+export 'package:otido2/widgets/widget_table_calendar.dart';
 
 // Localization
 export 'package:otido2/generated/l10n.dart';

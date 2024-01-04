@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:otido2/helper.dart';
 
-
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 

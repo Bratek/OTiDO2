@@ -32,6 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "registration": MessageLookupByLibrary.simpleMessage("Registration"),
+        "reklama": MessageLookupByLibrary.simpleMessage("Advertisement"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "sign_out": MessageLookupByLibrary.simpleMessage("Sign out"),
         "user_name": MessageLookupByLibrary.simpleMessage("Name"),

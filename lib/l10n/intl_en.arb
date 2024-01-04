@@ -9,8 +9,11 @@
   "password": "Password",
   "profile": "Profile",
   "registration": "Registration",
+  "reklama": "Advertisement",
   "settings": "Settings",
+  "sign_in": "Sign in",
   "sign_out": "Sign out",
   "user_name": "Name",
+  "version": "Version: 2.0",
   "zaregistrirovat": "Register"
 }

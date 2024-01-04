@@ -9,8 +9,11 @@
   "password": "Пароль",
   "profile": "Профиль",
   "registration": "Регистрация",
+  "reklama": "Реклама",
   "settings": "Настройки",
+  "sign_in": "Войти",
   "sign_out": "Выход",
   "user_name": "Фамилия Имя",
+  "version": "Версия: 2.0",
   "zaregistrirovat": "Зарегистрировать"
 }

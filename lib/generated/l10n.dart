@@ -60,6 +60,16 @@ class S {
     );
   }
 
+  /// `reklama`
+  String get reklama {
+    return Intl.message(
+      'Advertisement',
+      name: 'reklama',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `OTiDO`
   String get app_name {
     return Intl.message(
@@ -85,6 +95,16 @@ class S {
     return Intl.message(
       'Email',
       name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version`
+  String get version {
+    return Intl.message(
+      'Version: 1.2',
+      name: 'version',
       desc: '',
       args: [],
     );
