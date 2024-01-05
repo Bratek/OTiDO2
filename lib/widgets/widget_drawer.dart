@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:otido2/helper.dart';
 
 Widget wDrawer(BuildContext context) {
-  final appTheme = Theme.of(context);
+  final appTheme = dataTheme(Theme.of(context).brightness);
   return Drawer(
     backgroundColor: appTheme.colorScheme.backgroundColor,
     child: SafeArea(
@@ -54,6 +54,13 @@ Widget wDrawer(BuildContext context) {
                   onPressed: () {},
                   child: Text(
                     S.of(context).settings,
+                    style: appTheme.textTheme.menuItem,
+                  ),
+                ),
+                TextButton(
+                  onPressed: () => Navigator.pushNamed(context, '/'),
+                  child: Text(
+                    S.of(context).sign_out,
                     style: appTheme.textTheme.menuItem,
                   ),
                 ),

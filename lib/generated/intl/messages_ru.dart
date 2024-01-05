@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "registration": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "reklama": MessageLookupByLibrary.simpleMessage("Реклама"),
         "settings": MessageLookupByLibrary.simpleMessage("Настройки"),
+        "sign_in": MessageLookupByLibrary.simpleMessage("Вход"),
         "sign_out": MessageLookupByLibrary.simpleMessage("Выход"),
         "user_name": MessageLookupByLibrary.simpleMessage("Фамилия Имя"),
         "zaregistrirovat":

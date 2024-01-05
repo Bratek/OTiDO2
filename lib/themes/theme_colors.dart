@@ -35,4 +35,5 @@ class ThemeColors {
       light == Brightness.light ? Color(0xFF523F2C) : Color(0xFFF0EAE3);
   Color get accentColor => Color(0xFFEE7700);
   Color get sameLightColor => Color(0xFFFCF5ED);
+  Color get buttonTextColor => Color(0xFFF0EAE3);
 }

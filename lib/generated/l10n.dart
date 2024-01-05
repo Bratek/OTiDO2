@@ -181,6 +181,16 @@ class S {
   }
 
   /// `Sign out`
+  String get sign_in {
+    return Intl.message(
+      'Sign in',
+      name: 'sign_in',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign out`
   String get sign_out {
     return Intl.message(
       'Sign out',

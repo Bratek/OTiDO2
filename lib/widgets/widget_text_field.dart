@@ -4,11 +4,13 @@ import 'package:otido2/themes/data_theme.dart';
 Widget wTextField(BuildContext context,
     {TextEditingController? controller,
     String label = '',
-    bool obscure = false}) {
+    bool obscure = false,
+    TextInputType keyboardType = TextInputType.text}) {
   return TextField(
     controller: controller,
     style: Theme.of(context).textTheme.body,
     decoration: InputDecoration(labelText: label),
     obscureText: obscure,
+    keyboardType: keyboardType,
   );
 }

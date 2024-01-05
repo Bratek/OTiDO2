@@ -29,7 +29,13 @@ class MyApp extends StatelessWidget {
       supportedLocales: const [
         Locale('ru'),
       ],
-      home: const MainScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/main': (context) => const MainScreen(),
+      },
+      //home: const LoginScreen(), //MainScreen(),
     );
   }
 }

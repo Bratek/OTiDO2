@@ -15,7 +15,7 @@ ThemeData dataTheme(Brightness brightness) {
     //textTheme: CustomTextTheme, //textTheme,
     drawerTheme: drawerTheme,
     popupMenuTheme: popupMenuTheme,
-    appBarTheme: appBarTheme,
+    appBarTheme: appBarTheme(brightness),
   );
 }
 
@@ -28,6 +28,7 @@ extension CustomColorScheme on ColorScheme {
   Color get oppositeColor => _themeColors.oppositeColor;
   Color get accentColor => _themeColors.accentColor;
   Color get sameLightColor => _themeColors.sameLightColor;
+  Color get buttonTextColor => _themeColors.buttonTextColor;
 }
 
 //TextTheme ==========================================
@@ -38,7 +39,9 @@ extension CustomTextTheme on TextTheme {
   TextStyle get info => infoTextStyle;
   TextStyle get infoInvert => infoInvertTextStyle;
   TextStyle get label => labelTextStyle;
-  TextStyle get button => buttonTextStyle;
+  TextStyle get buttonText => buttonTextStyle;
+  TextStyle get textButton => textButtonStyle;
+
   TextStyle get popupMenu => popupMenuTextTheme;
   TextStyle get menuItem => menuItemTextTheme;
 }
@@ -90,9 +93,15 @@ TextStyle get infoInvertTextStyle => TextStyle(
     );
 
 TextStyle get buttonTextStyle => TextStyle(
-      color: _themeColors.sameLightColor,
-      fontSize: 20,
+      color: _themeColors.buttonTextColor,
+      fontSize: 18,
       fontWeight: FontWeight.bold,
+    );
+
+TextStyle get textButtonStyle => TextStyle(
+      color: _themeColors.oppositeColor,
+      fontSize: 18,
+      fontWeight: FontWeight.normal,
     );
 
 //Widgets Themes ==========================================
@@ -127,9 +136,12 @@ PopupMenuThemeData get popupMenuTheme => PopupMenuThemeData(
       position: PopupMenuPosition.under,
     );
 
-AppBarTheme get appBarTheme => AppBarTheme(
-      backgroundColor: _themeColors.backgroundColor,
-      systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent, //_themeColors.backgroundColor,
-      ),
-    );
+AppBarTheme appBarTheme(Brightness brightness) {
+  _themeColors = ThemeColors(brightness);
+  return AppBarTheme(
+    backgroundColor: _themeColors.backgroundColor,
+    systemOverlayStyle: SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent, //_themeColors.backgroundColor,
+    ),
+  );
+}
