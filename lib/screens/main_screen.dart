@@ -1,6 +1,6 @@
 //import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
-import 'package:otido2/helper.dart';
+import 'package:otido2/app_library.dart';
 
 //import 'package:table_calendar/table_calendar.dart';
 
@@ -12,7 +12,7 @@ class MainScreen extends StatelessWidget {
     ThemeData appTheme = Theme.of(context);
     return Scaffold(
       appBar: _Appbar(context, appTheme),
-      drawer: wDrawer(context),
+      drawer: DrawerWidget(),
       body: Column(
         children: [
           Padding(

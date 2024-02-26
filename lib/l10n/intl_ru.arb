@@ -1,11 +1,17 @@
 {
   "about": "О приложении",
   "app_name": "ОТиДО",
+  "bus": "Автобус",
+  "carName": "Наименование",
+  "cargo": "Грузовая",
   "dobro_pozhalovat": "Добро пожаловать!",
   "email": "Эл.почта",
   "feedback": "Обратная связь",
   "garage": "Гараж",
+  "gosNumber": "Гос. номер",
   "mail": "email@mail.ru",
+  "model2": "Модель",
+  "passanger": "Пассажирский",
   "password": "Пароль",
   "profile": "Профиль",
   "registration": "Регистрация",
@@ -14,6 +20,11 @@
   "sign_in": "Войти",
   "sign_out": "Выход",
   "user_name": "Фамилия Имя",
+  "vehicle": "Транспортное средство",
   "version": "Версия: 2.0",
-  "zaregistrirovat": "Зарегистрировать"
+  "zaregistrirovat": "Зарегистрировать",
+  "region": "Регион",
+  "carType": "Вид ТС",
+  "carBrand": "Марка",
+  "carModel": "Модель"
 }

@@ -60,21 +60,41 @@ class S {
     );
   }
 
-  /// `reklama`
-  String get reklama {
-    return Intl.message(
-      'Advertisement',
-      name: 'reklama',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `OTiDO`
   String get app_name {
     return Intl.message(
       'OTiDO',
       name: 'app_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bus`
+  String get bus {
+    return Intl.message(
+      'Bus',
+      name: 'bus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get carName {
+    return Intl.message(
+      'Name',
+      name: 'carName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cargo`
+  String get cargo {
+    return Intl.message(
+      'Cargo',
+      name: 'cargo',
       desc: '',
       args: [],
     );
@@ -100,16 +120,6 @@ class S {
     );
   }
 
-  /// `Version`
-  String get version {
-    return Intl.message(
-      'Version: 1.2',
-      name: 'version',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Feedback`
   String get feedback {
     return Intl.message(
@@ -130,11 +140,41 @@ class S {
     );
   }
 
+  /// `Car number`
+  String get gosNumber {
+    return Intl.message(
+      'Car number',
+      name: 'gosNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `email@mail.com`
   String get mail {
     return Intl.message(
       'email@mail.com',
       name: 'mail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Model`
+  String get model2 {
+    return Intl.message(
+      'Model',
+      name: 'model2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passanger`
+  String get passanger {
+    return Intl.message(
+      'Passanger',
+      name: 'passanger',
       desc: '',
       args: [],
     );
@@ -170,6 +210,16 @@ class S {
     );
   }
 
+  /// `Advertisement`
+  String get reklama {
+    return Intl.message(
+      'Advertisement',
+      name: 'reklama',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Settings`
   String get settings {
     return Intl.message(
@@ -180,7 +230,7 @@ class S {
     );
   }
 
-  /// `Sign out`
+  /// `Sign in`
   String get sign_in {
     return Intl.message(
       'Sign in',
@@ -210,11 +260,71 @@ class S {
     );
   }
 
+  /// `Vehicle`
+  String get vehicle {
+    return Intl.message(
+      'Vehicle',
+      name: 'vehicle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version: 2.0`
+  String get version {
+    return Intl.message(
+      'Version: 2.0',
+      name: 'version',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Register`
   String get zaregistrirovat {
     return Intl.message(
       'Register',
       name: 'zaregistrirovat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Region`
+  String get region {
+    return Intl.message(
+      'Region',
+      name: 'region',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Car type`
+  String get carType {
+    return Intl.message(
+      'Car type',
+      name: 'carType',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Car brand`
+  String get carBrand {
+    return Intl.message(
+      'Car brand',
+      name: 'carBrand',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Car model`
+  String get carModel {
+    return Intl.message(
+      'Car model',
+      name: 'carModel',
       desc: '',
       args: [],
     );

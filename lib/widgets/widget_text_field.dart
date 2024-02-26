@@ -7,6 +7,7 @@ Widget wTextField(BuildContext context,
     bool obscure = false,
     TextInputType keyboardType = TextInputType.text}) {
   return TextField(
+    //expands: true ,
     controller: controller,
     style: Theme.of(context).textTheme.body,
     decoration: InputDecoration(labelText: label),

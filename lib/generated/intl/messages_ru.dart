@@ -24,20 +24,33 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("О приложении"),
         "app_name": MessageLookupByLibrary.simpleMessage("ОТиДО"),
+        "bus": MessageLookupByLibrary.simpleMessage("Автобус"),
+        "carBrand": MessageLookupByLibrary.simpleMessage("Марка"),
+        "carModel": MessageLookupByLibrary.simpleMessage("Модель"),
+        "carName": MessageLookupByLibrary.simpleMessage("Наименование"),
+        "carType": MessageLookupByLibrary.simpleMessage("Вид ТС"),
+        "cargo": MessageLookupByLibrary.simpleMessage("Грузовая"),
         "dobro_pozhalovat":
             MessageLookupByLibrary.simpleMessage("Добро пожаловать!"),
         "email": MessageLookupByLibrary.simpleMessage("Эл.почта"),
         "feedback": MessageLookupByLibrary.simpleMessage("Обратная связь"),
         "garage": MessageLookupByLibrary.simpleMessage("Гараж"),
+        "gosNumber": MessageLookupByLibrary.simpleMessage("Гос. номер"),
         "mail": MessageLookupByLibrary.simpleMessage("email@mail.ru"),
+        "model2": MessageLookupByLibrary.simpleMessage("Модель"),
+        "passanger": MessageLookupByLibrary.simpleMessage("Пассажирский"),
         "password": MessageLookupByLibrary.simpleMessage("Пароль"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
+        "region": MessageLookupByLibrary.simpleMessage("Регион"),
         "registration": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "reklama": MessageLookupByLibrary.simpleMessage("Реклама"),
         "settings": MessageLookupByLibrary.simpleMessage("Настройки"),
-        "sign_in": MessageLookupByLibrary.simpleMessage("Вход"),
+        "sign_in": MessageLookupByLibrary.simpleMessage("Войти"),
         "sign_out": MessageLookupByLibrary.simpleMessage("Выход"),
         "user_name": MessageLookupByLibrary.simpleMessage("Фамилия Имя"),
+        "vehicle":
+            MessageLookupByLibrary.simpleMessage("Транспортное средство"),
+        "version": MessageLookupByLibrary.simpleMessage("Версия: 2.0"),
         "zaregistrirovat":
             MessageLookupByLibrary.simpleMessage("Зарегистрировать")
       };

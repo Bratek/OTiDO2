@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-Widget wGosNumber(BuildContext context, String number, String region) {
+Widget wGosNumber(BuildContext context,
+    [String number = '', String region = '']) {
   return Container(
       width: 140,
+      height: 32,
       //padding: const EdgeInsets.only(left: 8.0, right: 8.0),
       decoration: BoxDecoration(
           color: Colors.white,

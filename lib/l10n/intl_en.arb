@@ -1,11 +1,17 @@
 {
   "about": "About",
   "app_name": "OTiDO",
+  "bus": "Bus",
+  "carName": "Name",
+  "cargo": "Cargo",
   "dobro_pozhalovat": "Welcome!",
   "email": "Email",
   "feedback": "Feedback",
   "garage": "Garage",
+  "gosNumber": "Car number",
   "mail": "email@mail.com",
+  "model2": "Model",
+  "passanger": "Passanger",
   "password": "Password",
   "profile": "Profile",
   "registration": "Registration",
@@ -14,6 +20,11 @@
   "sign_in": "Sign in",
   "sign_out": "Sign out",
   "user_name": "Name",
+  "vehicle": "Vehicle",
   "version": "Version: 2.0",
-  "zaregistrirovat": "Register"
+  "zaregistrirovat": "Register",
+  "region": "Region",
+  "carType": "Car type",
+  "carBrand": "Car brand",
+  "carModel": "Car model"
 }
