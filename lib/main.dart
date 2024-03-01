@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:otido2/app_library.dart';
+import 'package:otido2/data/db.dart';
+import 'package:otido2/screens/wb_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +13,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DB db = DB();
+    gCurrentCar = db.getCarById(gCurrentCarId);
 
-    
     return MaterialApp(
       theme: dataTheme(Brightness.light),
       darkTheme: dataTheme(Brightness.dark),
@@ -34,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/main': (context) => const MainScreen(),
         '/garage': (context) => const GarageScreen(),
         '/car': (context) => const CarScreen(),
+        '/wb': (context) => const WBScreen(),
       },
       //home: const LoginScreen(), //MainScreen(),f
     );

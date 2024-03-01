@@ -37,7 +37,7 @@ class MainScreen extends StatelessWidget {
 
   AppBar _Appbar(context, ThemeData appTheme) {
     return AppBar(
-      title: wGosNumber(context, 'a 123 aa', '123'),
+      title: wGosNumber(context, gCurrentCar.number!, gCurrentCar.region!),
       centerTitle: true,
       actions: [
         PopupMenuButton(

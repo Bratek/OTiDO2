@@ -15,7 +15,7 @@ class _GarageState extends State<GarageScreen> {
   Widget build(BuildContext context) {
     ThemeData appTheme = Theme.of(context);
     DB db = DB();
-    List cars = db.getCarList();
+    List carList = db.getCarList();
 
     return Scaffold(
       appBar: AppBar(
@@ -26,10 +26,10 @@ class _GarageState extends State<GarageScreen> {
         ),
       ),
       body: ListView.builder(
-          itemCount: cars.length,
+          itemCount: carList.length,
           itemBuilder: (context, index) {
-            Car currentCar = cars[index];
-            final currentColor = (currentCar == gCurrentCar
+            Car currentCar = carList[index];
+            final currentColor = (index == gCurrentCarId
                 ? appTheme.colorScheme.accentColor
                 : appTheme.colorScheme.previousColor);
             return Padding(
@@ -80,10 +80,10 @@ class _GarageState extends State<GarageScreen> {
                     ),
                     Radio(
                       value: index,
-                      groupValue: gChoice,
+                      groupValue: gCurrentCarId,
                       onChanged: (_) {
                         setState(() {
-                          gChoice = index;
+                          gCurrentCarId = index;
                         });
                       },
                     ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:otido2/app_library.dart';
+import 'package:otido2/data/db.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -7,6 +8,9 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appTheme = dataTheme(Theme.of(context).brightness);
+    var db = DB();
+    var currentUser = db.getUserById(0);
+
     return Drawer(
       backgroundColor: appTheme.colorScheme.backgroundColor,
       child: SafeArea(
@@ -20,13 +24,13 @@ class DrawerWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Иванов Максимильян Савельевич',
+                  "${currentUser.surname} ${currentUser.name} ${currentUser.patronymic}",
                   style: appTheme.textTheme.titleMin,
                   softWrap: true,
                 ),
                 vSpace(10),
                 Text(
-                  "email@mail.ru",
+                  "${currentUser.email}",
                   style: appTheme.textTheme.info
                       .copyWith(color: appTheme.colorScheme.mediumColor),
                   softWrap: true,

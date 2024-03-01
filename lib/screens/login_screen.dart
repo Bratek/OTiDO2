@@ -35,7 +35,8 @@ class LoginScreen extends StatelessWidget {
               vSpace(100),
               wButton(context,
                   label: S.of(context).sign_in,
-                  onPressed: () => Navigator.pushNamed(context, '/main')),
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/wb')), //'/main')),
               vSpace(30),
               TextButton(
                 onPressed: () {},

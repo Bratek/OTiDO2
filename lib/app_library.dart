@@ -10,6 +10,7 @@ export 'package:otido2/screens/main_screen.dart';
 export 'package:otido2/screens/login_screen.dart';
 export 'package:otido2/screens/garage_screen.dart';
 export 'package:otido2/screens/car_screen.dart';
+export 'package:otido2/screens/wb_main_screen.dart';
 
 // Widgets
 export 'package:otido2/widgets/widget_button.dart';
@@ -26,3 +27,4 @@ export 'package:otido2/generated/l10n.dart';
 
 //Data
 export 'package:otido2/data/global.dart';
+export 'package:otido2/models/user.dart';

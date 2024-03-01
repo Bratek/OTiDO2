@@ -1,5 +1,6 @@
 import 'package:otido2/app_library.dart';
 
+// Car list
 List<Car> cars = <Car>[
   Car(
     id: 0,
@@ -28,4 +29,11 @@ class DB {
   List<Car> getCarList() => cars;
 
   Car getCarById(int index) => cars[index];
+
+  User getUserById(int index) => User(
+      surname: "Пушкин",
+      name: "Александр",
+      patronymic: "Сергеевич",
+      email: "ivanov.ivan.ivanovich@mail.ru",
+      driverLicense: "12 34 567890");
 }
