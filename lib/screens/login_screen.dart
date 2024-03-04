@@ -10,6 +10,8 @@ class LoginScreen extends StatelessWidget {
     final sysOverlayStyle = Theme.of(context).brightness == Brightness.light
         ? SystemUiOverlayStyle.dark
         : SystemUiOverlayStyle.light;
+    wFlex flex = wFlex(context, 20);
+
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: sysOverlayStyle,
@@ -19,11 +21,14 @@ class LoginScreen extends StatelessWidget {
           padding: const EdgeInsets.only(left: 30, right: 30),
           child: Column(
             children: [
-              vSpace(60),
+              //vSpace(30),
+              //flex.fit(1),
               wLogo(context),
-              vSpace(80),
+              //vSpace(80),
+              flex.fit(2),
               wTitle(context, title: S.of(context).dobro_pozhalovat),
-              vSpace(60),
+              //vSpace(60),
+              flex.fit(2),
               wTextField(context,
                   label: S.of(context).email,
                   keyboardType: TextInputType.emailAddress),
@@ -32,14 +37,25 @@ class LoginScreen extends StatelessWidget {
                 label: S.of(context).password,
                 obscure: true,
               ),
-              vSpace(100),
+              //vSpace(30),
+              flex.fit(1),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  S.of(context).zabyil_parol,
+                  style: Theme.of(context).textTheme.label,
+                ),
+              ),
+              //vSpace(20),
+              flex.fit(1),
               wButton(context,
                   label: S.of(context).sign_in,
                   onPressed: () =>
                       Navigator.pushNamed(context, '/wb')), //'/main')),
-              vSpace(30),
+              //vSpace(20),
+              flex.fit(1),
               TextButton(
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(context, '/registation'),
                 child: Text(
                   S.of(context).registration,
                   style: Theme.of(context).textTheme.label,

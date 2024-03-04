@@ -30,11 +30,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "carName": MessageLookupByLibrary.simpleMessage("Name"),
         "carType": MessageLookupByLibrary.simpleMessage("Car type"),
         "cargo": MessageLookupByLibrary.simpleMessage("Cargo"),
+        "confirm_code":
+            MessageLookupByLibrary.simpleMessage("Код подтверждения"),
         "dobro_pozhalovat": MessageLookupByLibrary.simpleMessage("Welcome!"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "feedback": MessageLookupByLibrary.simpleMessage("Feedback"),
         "garage": MessageLookupByLibrary.simpleMessage("Garage"),
         "gosNumber": MessageLookupByLibrary.simpleMessage("Car number"),
+        "info_1_1": MessageLookupByLibrary.simpleMessage(
+            "На указанную электронную почту было направлено письмо с кодом подтверждения."),
+        "info_1_2": MessageLookupByLibrary.simpleMessage(
+            "Пожалуйста, введите его ниже для подтверждения регистрации."),
         "mail": MessageLookupByLibrary.simpleMessage("email@mail.com"),
         "model2": MessageLookupByLibrary.simpleMessage("Model"),
         "passanger": MessageLookupByLibrary.simpleMessage("Passanger"),
@@ -43,12 +49,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "region": MessageLookupByLibrary.simpleMessage("Region"),
         "registration": MessageLookupByLibrary.simpleMessage("Registration"),
         "reklama": MessageLookupByLibrary.simpleMessage("Advertisement"),
+        "send": MessageLookupByLibrary.simpleMessage("Отправить"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "sign_out": MessageLookupByLibrary.simpleMessage("Sign out"),
         "user_name": MessageLookupByLibrary.simpleMessage("Name"),
         "vehicle": MessageLookupByLibrary.simpleMessage("Vehicle"),
         "version": MessageLookupByLibrary.simpleMessage("Version: 2.0"),
+        "zabyil_parol": MessageLookupByLibrary.simpleMessage("Забыл пароль"),
         "zaregistrirovat": MessageLookupByLibrary.simpleMessage("Register")
       };
 }

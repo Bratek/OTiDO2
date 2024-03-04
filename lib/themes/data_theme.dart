@@ -32,6 +32,16 @@ extension CustomColorScheme on ColorScheme {
 }
 
 //TextTheme ==========================================
+// title:      26, bold, oppositeColor;
+// titleMin:   20, bold, oppositeColor;
+// body:       18, normal, oppositeColor;
+// info:       16, normal, oppositeColor;
+// infoInvert: 16, normal, backgroundColor;
+// label:      18, normal, mediumColor;
+// buttonText: 18, bold, buttonTextColor;
+// textButton: 18, normal, oppositeColor;
+// param:      20, normal, opposite
+
 extension CustomTextTheme on TextTheme {
   TextStyle get title => titleTextStyle;
   TextStyle get titleMin => titleMinTextStyle;
@@ -41,6 +51,7 @@ extension CustomTextTheme on TextTheme {
   TextStyle get label => labelTextStyle;
   TextStyle get buttonText => buttonTextStyle;
   TextStyle get textButton => textButtonStyle;
+  TextStyle get param => paramTextStyle;
 
   TextStyle get popupMenu => popupMenuTextTheme;
   TextStyle get menuItem => menuItemTextTheme;
@@ -101,6 +112,12 @@ TextStyle get buttonTextStyle => TextStyle(
 TextStyle get textButtonStyle => TextStyle(
       color: _themeColors.oppositeColor,
       fontSize: 18,
+      fontWeight: FontWeight.normal,
+    );
+
+TextStyle get paramTextStyle => TextStyle(
+      color: _themeColors.oppositeColor,
+      fontSize: 26,
       fontWeight: FontWeight.normal,
     );
 

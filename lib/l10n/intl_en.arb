@@ -26,5 +26,10 @@
   "region": "Region",
   "carType": "Car type",
   "carBrand": "Car brand",
-  "carModel": "Car model"
+  "carModel": "Car model",
+  "zabyil_parol": "Забыл пароль",
+  "send": "Отправить",
+  "confirm_code": "Код подтверждения",
+  "info_1_1": "На указанную электронную почту было направлено письмо с кодом подтверждения.",
+  "info_1_2": "Пожалуйста, введите его ниже для подтверждения регистрации."
 }

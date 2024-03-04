@@ -30,12 +30,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "carName": MessageLookupByLibrary.simpleMessage("Наименование"),
         "carType": MessageLookupByLibrary.simpleMessage("Вид ТС"),
         "cargo": MessageLookupByLibrary.simpleMessage("Грузовая"),
+        "confirm_code":
+            MessageLookupByLibrary.simpleMessage("Код подтверждения"),
         "dobro_pozhalovat":
             MessageLookupByLibrary.simpleMessage("Добро пожаловать!"),
         "email": MessageLookupByLibrary.simpleMessage("Эл.почта"),
         "feedback": MessageLookupByLibrary.simpleMessage("Обратная связь"),
         "garage": MessageLookupByLibrary.simpleMessage("Гараж"),
         "gosNumber": MessageLookupByLibrary.simpleMessage("Гос. номер"),
+        "info_1_1": MessageLookupByLibrary.simpleMessage(
+            "На указанную электронную почту было направлено письмо с кодом подтверждения."),
+        "info_1_2": MessageLookupByLibrary.simpleMessage(
+            "Пожалуйста, введите его ниже для подтверждения регистрации."),
         "mail": MessageLookupByLibrary.simpleMessage("email@mail.ru"),
         "model2": MessageLookupByLibrary.simpleMessage("Модель"),
         "passanger": MessageLookupByLibrary.simpleMessage("Пассажирский"),
@@ -44,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "region": MessageLookupByLibrary.simpleMessage("Регион"),
         "registration": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "reklama": MessageLookupByLibrary.simpleMessage("Реклама"),
+        "send": MessageLookupByLibrary.simpleMessage("Отправить"),
         "settings": MessageLookupByLibrary.simpleMessage("Настройки"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Войти"),
         "sign_out": MessageLookupByLibrary.simpleMessage("Выход"),
@@ -51,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "vehicle":
             MessageLookupByLibrary.simpleMessage("Транспортное средство"),
         "version": MessageLookupByLibrary.simpleMessage("Версия: 2.0"),
+        "zabyil_parol": MessageLookupByLibrary.simpleMessage("Забыл пароль"),
         "zaregistrirovat":
             MessageLookupByLibrary.simpleMessage("Зарегистрировать")
       };

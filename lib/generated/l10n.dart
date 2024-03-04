@@ -329,6 +329,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Забыл пароль`
+  String get zabyil_parol {
+    return Intl.message(
+      'Забыл пароль',
+      name: 'zabyil_parol',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Отправить`
+  String get send {
+    return Intl.message(
+      'Отправить',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Код подтверждения`
+  String get confirm_code {
+    return Intl.message(
+      'Код подтверждения',
+      name: 'confirm_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `На указанную электронную почту было направлено письмо с кодом подтверждения.`
+  String get info_1_1 {
+    return Intl.message(
+      'На указанную электронную почту было направлено письмо с кодом подтверждения.',
+      name: 'info_1_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Пожалуйста, введите его ниже для подтверждения регистрации.`
+  String get info_1_2 {
+    return Intl.message(
+      'Пожалуйста, введите его ниже для подтверждения регистрации.',
+      name: 'info_1_2',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

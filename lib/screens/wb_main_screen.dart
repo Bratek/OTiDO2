@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:otido2/app_library.dart';
 
 class WBMainScreen extends StatefulWidget {
@@ -25,7 +23,7 @@ class _WBMainScreenState extends State<WBMainScreen> {
             theme: appTheme,
             child: Text(
               "15.10.2023",
-              style: appTheme.textTheme.title,
+              style: appTheme.textTheme.param,
             ),
           ),
           vSpace(8),
@@ -35,9 +33,9 @@ class _WBMainScreenState extends State<WBMainScreen> {
                 context: context,
                 theme: appTheme,
                 child: Column(children: [
-                  Text("Время выезда", style: appTheme.textTheme.titleMedium),
+                  Text("Время выезда", style: appTheme.textTheme.label),
                   vSpace(8),
-                  Text("08:15", style: appTheme.textTheme.),
+                  Text("08:15", style: appTheme.textTheme.param),
                 ]),
               ),
             ),
@@ -48,9 +46,9 @@ class _WBMainScreenState extends State<WBMainScreen> {
                 theme: appTheme,
                 child: Column(
                   children: [
-                    Text("Время заезда", style: appTheme.textTheme.titleMedium),
+                    Text("Время заезда", style: appTheme.textTheme.label),
                     vSpace(8),
-                    Text("18:10", style: appTheme.textTheme.title),
+                    Text("18:10", style: appTheme.textTheme.param),
                   ],
                 ),
               ),
@@ -63,15 +61,14 @@ class _WBMainScreenState extends State<WBMainScreen> {
                 context: context,
                 theme: appTheme,
                 child: Column(children: [
-                  Text("Пробег на начало",
-                      style: appTheme.textTheme.titleMedium),
+                  Text("Пробег на начало", style: appTheme.textTheme.label),
                   vSpace(8),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("102526", style: appTheme.textTheme.title),
+                      Text("1102526", style: appTheme.textTheme.param),
                       hSpace(8),
-                      Text("км", style: appTheme.textTheme.titleSmall)
+                      Text("км", style: appTheme.textTheme.label)
                     ],
                   ),
                 ]),
@@ -83,15 +80,14 @@ class _WBMainScreenState extends State<WBMainScreen> {
                 context: context,
                 theme: appTheme,
                 child: Column(children: [
-                  Text("Пробег на конец",
-                      style: appTheme.textTheme.titleMedium),
+                  Text("Пробег на конец", style: appTheme.textTheme.label),
                   vSpace(8),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("102756", style: appTheme.textTheme.title),
+                      Text("1102756", style: appTheme.textTheme.param),
                       hSpace(8),
-                      Text("км", style: appTheme.textTheme.titleSmall),
+                      Text("км", style: appTheme.textTheme.label),
                     ],
                   ),
                 ]),
@@ -105,14 +101,14 @@ class _WBMainScreenState extends State<WBMainScreen> {
                 context: context,
                 theme: appTheme,
                 child: Column(children: [
-                  Text("Бак на начало", style: appTheme.textTheme.titleMedium),
+                  Text("Бак на начало", style: appTheme.textTheme.label),
                   vSpace(8),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("15.500", style: appTheme.textTheme.title),
+                      Text("15.500", style: appTheme.textTheme.param),
                       hSpace(8),
-                      Text("л", style: appTheme.textTheme.titleSmall)
+                      Text("л", style: appTheme.textTheme.label)
                     ],
                   ),
                 ]),
@@ -124,14 +120,14 @@ class _WBMainScreenState extends State<WBMainScreen> {
                 context: context,
                 theme: appTheme,
                 child: Column(children: [
-                  Text("Бак на конец", style: appTheme.textTheme.titleMedium),
+                  Text("Бак на конец", style: appTheme.textTheme.label),
                   vSpace(8),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("12.500", style: appTheme.textTheme.title),
+                      Text("12.500", style: appTheme.textTheme.param),
                       hSpace(8),
-                      Text("л", style: appTheme.textTheme.titleSmall),
+                      Text("л", style: appTheme.textTheme.label),
                     ],
                   ),
                 ]),
@@ -145,14 +141,14 @@ class _WBMainScreenState extends State<WBMainScreen> {
                 context: context,
                 theme: appTheme,
                 child: Column(children: [
-                  Text("Заправка", style: appTheme.textTheme.titleMedium),
+                  Text("Заправка", style: appTheme.textTheme.label),
                   vSpace(8),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("20.000", style: appTheme.textTheme.title),
+                      Text("20.000", style: appTheme.textTheme.param),
                       hSpace(8),
-                      Text("л", style: appTheme.textTheme.titleSmall)
+                      Text("л", style: appTheme.textTheme.label)
                     ],
                   ),
                 ]),
@@ -164,15 +160,14 @@ class _WBMainScreenState extends State<WBMainScreen> {
                 context: context,
                 theme: appTheme,
                 child: Column(children: [
-                  Text("Суточный расход",
-                      style: appTheme.textTheme.titleMedium),
+                  Text("Суточный расход", style: appTheme.textTheme.label),
                   vSpace(8),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("23.000", style: appTheme.textTheme.title),
+                      Text("23.000", style: appTheme.textTheme.param),
                       hSpace(8),
-                      Text("л", style: appTheme.textTheme.titleSmall),
+                      Text("л", style: appTheme.textTheme.label),
                     ],
                   ),
                 ]),
