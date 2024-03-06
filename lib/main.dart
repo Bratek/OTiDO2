@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:otido2/app_library.dart';
 import 'package:otido2/data/db.dart';
+import 'package:otido2/screens/new_password_screen.dart';
+import 'package:otido2/screens/recovery_screen.dart';
 import 'package:otido2/screens/wb_screen.dart';
 
 void main() {
@@ -30,12 +32,14 @@ class MyApp extends StatelessWidget {
       supportedLocales: const [
         Locale('ru'),
       ],
-      initialRoute: '/',
+      initialRoute: '/', 
       routes: {
         '/': (context) => const LoginScreen(),
         '/login': (context) => const LoginScreen(),
         '/registation': (context) => const RegistrationScreen(),
         '/confirm': (context) => const ConfirmScreen(),
+        '/recovery': (context) => const RecoveryScreen(),
+        '/newpassword': (context) => const NewPasswordScreen(),
         '/main': (context) => const MainScreen(),
         '/garage': (context) => const GarageScreen(),
         '/car': (context) => const CarScreen(),

@@ -13,6 +13,8 @@ export 'package:otido2/screens/car_screen.dart';
 export 'package:otido2/screens/wb_main_screen.dart';
 export 'package:otido2/screens/registration_screen.dart';
 export 'package:otido2/screens/confirm_screen.dart';
+export 'package:otido2/screens/recovery_screen.dart';
+export 'package:otido2/screens/new_password_screen.dart';
 
 // Widgets
 export 'package:otido2/widgets/widget_button.dart';

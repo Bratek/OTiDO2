@@ -379,6 +379,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Повторный ввод пароля`
+  String get reenter_password {
+    return Intl.message(
+      'Повторный ввод пароля',
+      name: 'reenter_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Для восстановления доступа введите зарегистрированный адрес электронной почты`
+  String get info_2 {
+    return Intl.message(
+      'Для восстановления доступа введите зарегистрированный адрес электронной почты',
+      name: 'info_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Введите новый пароль`
+  String get info3 {
+    return Intl.message(
+      'Введите новый пароль',
+      name: 'info3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

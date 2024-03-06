@@ -52,14 +52,18 @@ class DrawerWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
                     child: Text(
                       S.of(context).profile,
                       style: appTheme.textTheme.menuItem,
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
                     child: Text(
                       S.of(context).settings,
                       style: appTheme.textTheme.menuItem,
@@ -69,8 +73,6 @@ class DrawerWidget extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).pop();
                       Navigator.pushNamed(context, '/garage');
-
-                      ///garage');
                     },
                     child: Text(
                       S.of(context).garage,
@@ -78,7 +80,11 @@ class DrawerWidget extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () => Navigator.pushNamed(context, '/'),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/', (r) => false);
+                    },
                     child: Text(
                       S.of(context).sign_out,
                       style: appTheme.textTheme.menuItem,

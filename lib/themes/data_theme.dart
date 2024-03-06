@@ -37,7 +37,7 @@ extension CustomColorScheme on ColorScheme {
 // body:       18, normal, oppositeColor;
 // info:       16, normal, oppositeColor;
 // infoInvert: 16, normal, backgroundColor;
-// label:      18, normal, mediumColor;
+// label:      16, normal, mediumColor;
 // buttonText: 18, bold, buttonTextColor;
 // textButton: 18, normal, oppositeColor;
 // param:      20, normal, opposite
@@ -88,7 +88,7 @@ TextStyle get bodyTextStyle => TextStyle(
 
 TextStyle get labelTextStyle => TextStyle(
       color: _themeColors.mediumColor,
-      fontSize: 18,
+      fontSize: 16,
       fontWeight: FontWeight.normal,
     );
 

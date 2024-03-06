@@ -38,15 +38,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "feedback": MessageLookupByLibrary.simpleMessage("Обратная связь"),
         "garage": MessageLookupByLibrary.simpleMessage("Гараж"),
         "gosNumber": MessageLookupByLibrary.simpleMessage("Гос. номер"),
+        "info3": MessageLookupByLibrary.simpleMessage("Введите новый пароль"),
         "info_1_1": MessageLookupByLibrary.simpleMessage(
             "На указанную электронную почту было направлено письмо с кодом подтверждения."),
         "info_1_2": MessageLookupByLibrary.simpleMessage(
             "Пожалуйста, введите его ниже для подтверждения регистрации."),
+        "info_2": MessageLookupByLibrary.simpleMessage(
+            "Для восстановления доступа введите зарегистрированный адрес электронной почты"),
         "mail": MessageLookupByLibrary.simpleMessage("email@mail.ru"),
         "model2": MessageLookupByLibrary.simpleMessage("Модель"),
         "passanger": MessageLookupByLibrary.simpleMessage("Пассажирский"),
         "password": MessageLookupByLibrary.simpleMessage("Пароль"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
+        "reenter_password":
+            MessageLookupByLibrary.simpleMessage("Повторный ввод пароля"),
         "region": MessageLookupByLibrary.simpleMessage("Регион"),
         "registration": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "reklama": MessageLookupByLibrary.simpleMessage("Реклама"),

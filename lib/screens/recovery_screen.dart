@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:otido2/app_library.dart';
 
-class RegistrationScreen extends StatelessWidget {
-  const RegistrationScreen({super.key});
+class RecoveryScreen extends StatelessWidget {
+  const RecoveryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    wFlex flex = wFlex(context, 18);
+    ThemeData appTheme = Theme.of(context);
+    wFlex flex = wFlex(context, 14);
 
     return Scaffold(
       appBar: AppBar(),
@@ -15,27 +16,22 @@ class RegistrationScreen extends StatelessWidget {
           padding: const EdgeInsets.only(left: 30, right: 30),
           child: Column(
             children: [
-              //flex.fit(1),
               wLogo(context),
               flex.fit(2),
+              Text(
+                S.of(context).info_2,
+                textAlign: TextAlign.center,
+                style: appTheme.textTheme.info,
+              ),
+              flex.fit(1),
               wTextField(context,
                   label: S.of(context).email,
                   keyboardType: TextInputType.emailAddress),
-              wTextField(
-                context,
-                label: S.of(context).password,
-                obscure: true,
-              ),
-              wTextField(
-                context,
-                label: S.of(context).reenter_password,
-                obscure: true,
-              ),
-              flex.fit(3),
+              flex.fit(2),
               wButton(context,
                   label: S.of(context).send,
                   onPressed: () => Navigator.pushNamed(context, '/confirm',
-                      arguments: '/login')),
+                      arguments: '/newpassword')),
             ],
           ),
         ),

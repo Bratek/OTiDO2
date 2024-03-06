@@ -8,6 +8,9 @@ class ConfirmScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeData appTheme = Theme.of(context);
     wFlex flex = wFlex(context, 13);
+    RouteSettings? settings = ModalRoute.of(context)?.settings;
+    var nextScreen =
+        (settings == null ? '/login' : settings.arguments.toString());
 
     return Scaffold(
       appBar: AppBar(),
@@ -31,11 +34,17 @@ class ConfirmScreen extends StatelessWidget {
               flex.fit(1),
               wTextField(context,
                   label: S.of(context).confirm_code,
-                  keyboardType: TextInputType.number),
+                  keyboardType: TextInputType.number,
+                  align: TextAlign.center),
               flex.fit(2),
-              wButton(context,
-                  label: S.of(context).send,
-                  onPressed: () => Navigator.pushNamed(context, '/main')),
+              wButton(context, label: S.of(context).send, onPressed: () {
+                if (nextScreen == '/login') {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/login', (r) => false);
+                } else {
+                  Navigator.pushNamed(context, nextScreen);
+                }
+              }),
             ],
           ),
         ),
