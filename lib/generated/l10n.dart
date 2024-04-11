@@ -409,6 +409,26 @@ class S {
       args: [],
     );
   }
+
+  /// `OTiDO`
+  String get appName {
+    return Intl.message(
+      'OTiDO',
+      name: 'appName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Учет путевых листов`
+  String get tagline {
+    return Intl.message(
+      'Учет путевых листов',
+      name: 'tagline',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

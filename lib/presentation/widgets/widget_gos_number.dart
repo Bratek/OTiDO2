@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:otido2/app_library.dart';
 
-Widget wGosNumber(BuildContext context,
-    [String number = '', String region = '']) {
+Widget wGosNumber(BuildContext context, Car? car) {
+  if (car == null) car = Car();
+
   return Container(
       width: 140,
       height: 32,
@@ -17,8 +19,8 @@ Widget wGosNumber(BuildContext context,
             flex: 8,
             child: Center(
               child: Text(
-                number,
-                style: TextStyle(
+                car.gosNumber,
+                style: const TextStyle(
                   color: Colors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.normal,
@@ -26,19 +28,19 @@ Widget wGosNumber(BuildContext context,
               ),
             ),
           ),
+
           Container(
             color: Colors.black,
             height: 28,
             width: 2,
           ),
-          // Padding(
-          //   padding: const EdgeInsets.only(left: 8.0),
+
           Expanded(
             flex: 4,
             child: Center(
               child: Text(
-                region,
-                style: TextStyle(
+                car.gosRegion,
+                style: const TextStyle(
                   color: Colors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.normal,

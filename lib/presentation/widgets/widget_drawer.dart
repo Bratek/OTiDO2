@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:otido2/app_library.dart';
-import 'package:otido2/data/db.dart';
+import 'package:otido2/data/data_sources/db.dart';
+import 'package:otido2/data/models/preferences.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -54,6 +55,7 @@ class DrawerWidget extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
+                      Navigator.pushNamed(context, '/profile');
                     },
                     child: Text(
                       S.of(context).profile,

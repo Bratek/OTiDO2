@@ -9,15 +9,13 @@ class CarScreen extends StatelessWidget {
     final currentCar = ModalRoute.of(context)!.settings.arguments as Car;
 
     final controller_Number = TextEditingController();
-    controller_Number.text = currentCar.number ?? '';
+    controller_Number.text = currentCar.gosNumber;
     final controller_region = TextEditingController();
-    controller_Number.text = currentCar.region ?? '';
-    final controller_Name = TextEditingController();
-    controller_Number.text = currentCar.name ?? '';
+    controller_region.text = currentCar.gosNumber;
     final controller_Brand = TextEditingController();
-    controller_Number.text = currentCar.brand ?? '';
+    controller_Brand.text = currentCar.brand;
     final controller_Model = TextEditingController();
-    controller_Number.text = currentCar.model ?? '';
+    controller_Model.text = currentCar.model;
     final controller_Type = TextEditingController();
 
     ThemeData appTheme = Theme.of(context);
@@ -39,8 +37,6 @@ class CarScreen extends StatelessWidget {
                   controller: controller_Number),
               wTextField(context,
                   label: S.of(context).region, controller: controller_region),
-              wTextField(context,
-                  label: S.of(context).carName, controller: controller_Name),
               wTextField(context,
                   label: S.of(context).carType, controller: controller_Type),
               wTextField(context,

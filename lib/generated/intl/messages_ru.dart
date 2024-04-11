@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("О приложении"),
+        "appName": MessageLookupByLibrary.simpleMessage("OTiDO"),
         "app_name": MessageLookupByLibrary.simpleMessage("ОТиДО"),
         "bus": MessageLookupByLibrary.simpleMessage("Автобус"),
         "carBrand": MessageLookupByLibrary.simpleMessage("Марка"),
@@ -59,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settings": MessageLookupByLibrary.simpleMessage("Настройки"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Войти"),
         "sign_out": MessageLookupByLibrary.simpleMessage("Выход"),
+        "tagline": MessageLookupByLibrary.simpleMessage("Учет путевых листов"),
         "user_name": MessageLookupByLibrary.simpleMessage("Фамилия Имя"),
         "vehicle":
             MessageLookupByLibrary.simpleMessage("Транспортное средство"),

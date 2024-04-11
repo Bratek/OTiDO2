@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:otido2/themes/theme_colors.dart';
+import 'package:otido2/presentation/themes/theme_colors.dart';
 
 late ThemeColors _themeColors;
 

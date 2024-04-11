@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:otido2/app_library.dart';
-import 'package:otido2/data/db.dart';
+import 'package:otido2/data/data_sources/db.dart';
 //import 'package:otido2/widgets/widget_tile_car.dart';
 
 class GarageScreen extends StatefulWidget {
@@ -25,11 +25,17 @@ class _GarageState extends State<GarageScreen> {
           style: appTheme.textTheme.titleMin,
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: appTheme.colorScheme.accentColor,
+        shape: const CircleBorder(),
+        child: const Icon(Icons.add),
+        onPressed: () {},
+      ),
       body: ListView.builder(
           itemCount: carList.length,
           itemBuilder: (context, index) {
             Car currentCar = carList[index];
-            final currentColor = (index == gCurrentCarId
+            final currentColor = (index == Global.car.id
                 ? appTheme.colorScheme.accentColor
                 : appTheme.colorScheme.previousColor);
             return Padding(
@@ -64,8 +70,7 @@ class _GarageState extends State<GarageScreen> {
                                 softWrap: false,
                               ),
                               vSpace(8),
-                              wGosNumber(context, currentCar.number ?? '',
-                                  currentCar.region ?? ''),
+                              wGosNumber(context, currentCar),
                             ],
                           ),
                         ),
@@ -80,10 +85,10 @@ class _GarageState extends State<GarageScreen> {
                     ),
                     Radio(
                       value: index,
-                      groupValue: gCurrentCarId,
+                      groupValue: currentCar.id,
                       onChanged: (_) {
                         setState(() {
-                          gCurrentCarId = index;
+                          currentCar.id = index;
                         });
                       },
                     ),

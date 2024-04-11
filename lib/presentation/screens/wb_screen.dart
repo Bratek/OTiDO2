@@ -16,8 +16,7 @@ class _WBScreenState extends State<WBScreen> {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            title:
-                wGosNumber(context, gCurrentCar.number!, gCurrentCar.region!),
+            title: wGosNumber(context, Global.car),
             centerTitle: true,
             actions: [
               _popUpMenu(context, appTheme),

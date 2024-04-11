@@ -12,7 +12,7 @@ class MainScreen extends StatelessWidget {
     ThemeData appTheme = Theme.of(context);
     return Scaffold(
       appBar: _Appbar(context, appTheme),
-      drawer: DrawerWidget(),
+      drawer: const DrawerWidget(),
       body: Column(
         children: [
           Padding(
@@ -37,7 +37,7 @@ class MainScreen extends StatelessWidget {
 
   AppBar _Appbar(context, ThemeData appTheme) {
     return AppBar(
-      title: wGosNumber(context, gCurrentCar.number!, gCurrentCar.region!),
+      title: wGosNumber(context, Global.car),
       centerTitle: true,
       actions: [
         PopupMenuButton(
