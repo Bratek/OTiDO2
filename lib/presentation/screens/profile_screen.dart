@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:otido2/app_library.dart';
-import 'package:otido2/data/models/preferences.dart';
-import 'package:otido2/data/repositories/preferences_repo.dart';
+import 'package:otido2/utils/provider/app_provider.dart';
+import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -9,9 +9,11 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeData appTheme = Theme.of(context);
-    final Preferences pref;
-    pref = ModalRoute.of(context)!.settings.arguments as Preferences;
-    User user = pref.user;
+    //final user = context.read<AppProvider>().global.user;
+    final global = Provider.of<AppProvider>(context).global;
+    print('profile user: ${global.user}');
+
+    final user = global.user;
 
     //Controllers
     final surnameController = TextEditingController();
@@ -65,19 +67,18 @@ class ProfileScreen extends StatelessWidget {
                   controller: endDateController),
               wButton(context, label: S.of(context).sign_in,
                   onPressed: () async {
-                PreferencesRepo repo = PreferencesRepo();
-                user = User(
-                    name: nameController.text,
-                    surname: surnameController.text,
-                    patronymic: patronymicController.text,
-                    email: emailController.text,
-                    docSeria: seriesController.text,
-                    docNumber: numberController.text,
-                    licenseDateBegin: DateTime.parse(dateController.text),
-                    licenseDateEnd: DateTime.parse(endDateController.text));
+                user.withCopy(<String, dynamic>{
+                  'name': nameController.text,
+                  'surname': surnameController.text,
+                  'patronymic': patronymicController.text,
+                  'email': emailController.text,
+                  'docSeria': seriesController.text,
+                  'docNumber': numberController.text,
+                  'licenseDateBegin': DateTime.parse(dateController.text),
+                  'licenseDateEnd': DateTime.parse(endDateController.text),
+                });
 
-                pref.user = user;
-                await repo.savePreferences(pref);
+                await user.saveToSharedPreferences();
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text("Данные сохранены"),

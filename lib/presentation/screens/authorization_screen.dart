@@ -1,42 +1,20 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:otido2/app_library.dart';
-import 'package:otido2/data/models/preferences.dart';
-import 'package:otido2/data/repositories/preferences_repo.dart';
+import 'package:otido2/utils/provider/app_provider.dart';
+import 'package:provider/provider.dart';
 
-class AuthorizationScreen extends StatefulWidget {
-  const AuthorizationScreen({super.key});
-
-  @override
-  State<AuthorizationScreen> createState() => _AuthorizationScreenState();
-}
-
-class _AuthorizationScreenState extends State<AuthorizationScreen> {
-  Future<Preferences> loadPreferences() async {
-    PreferencesRepo pri = PreferencesRepo();
-    final result = await pri.getPrefrences().then((value) => value);
-    await Future.delayed(const Duration(seconds: 2));
-    return result;
-  }
+class AuthorizationScreen extends StatelessWidget {
+  const AuthorizationScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: loadPreferences(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            Preferences preferences = snapshot.data as Preferences;
-            if (preferences.token.isNotEmpty) {
-              return const MainScreen();
-            } else {
-              return const LoginScreen();
-            }
-          } else if (snapshot.hasError) {
-            return const Text('Error');
-          } else {
-            return const SplashScreen();
-          }
-        });
+    return ChangeNotifierProvider<AppProvider>(
+      create: (context) => AppProvider(),
+      child: Consumer<AppProvider>(
+        builder: (context, appProvider, _) {
+          return appProvider.isLoading ? SplashScreen() : MainScreen();
+        },
+      ),
+    );
   }
 }

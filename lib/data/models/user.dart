@@ -1,3 +1,5 @@
+import 'package:otido2/data/repositories/preferences_repo.dart';
+
 class User {
   late int id;
   late String surname;
@@ -73,13 +75,25 @@ class User {
         'license_date_end': licenseDateEnd
       };
 
-  // String get fullName => '$surname $name $patronymic';
-  // String get Surname => surname;
-  // String get Name => name;
-  // String get Patronymic => patronymic;
-  // String get Email => email;
-  // String get DocNumber => docNumber;
-  // String get DocSeria => docSeria;
-  // DateTime get LicenseDataBegin => licenseDateBegin;
-  // DateTime get LicenseDataEnd => licenseDateEnd;
+  void withCopy(Map<String, dynamic> json) {
+    id = json['id'] ?? 0;
+    surname = json['surname'] ?? '';
+    name = json['name'] ?? '';
+    patronymic = json['patronymic'] ?? '';
+    email = json['email'] ?? '';
+    docNumber = json['doc_number'] ?? '';
+    docSeria = json['doc_seria'] ?? '';
+
+    licenseDateBegin = json['license_data_begin'] != null
+        ? DateTime.parse(json['license_data_begin'])
+        : DateTime.parse('1980-01-01');
+    licenseDateEnd = json['license_data_end'] != null
+        ? DateTime.parse(json['license_data_end'])
+        : DateTime.parse('1980-01-01');
+  }
+
+  Future<void> saveToSharedPreferences() async {
+    final pref = PreferencesRepo();
+    await pref.setUserPreference(this);
+  }
 }

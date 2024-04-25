@@ -6,7 +6,7 @@ class PreferencesData {
   Future<String?> getPreferencesString({required String key}) async {
     final SharedPreferences prefs = await _prefs;
     String? str = prefs.getString(key);
-    return str;
+    return str ?? '';
   }
 
   Future<void> setPreferencesString(

@@ -38,5 +38,4 @@ export 'package:otido2/generated/l10n.dart';
 
 //Data
 export 'package:otido2/data/data_sources/db.dart';
-export 'package:otido2/data/data_sources/global.dart';
 export 'package:otido2/data/data_sources/shared_pref.dart';

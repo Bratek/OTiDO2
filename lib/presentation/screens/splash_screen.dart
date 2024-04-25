@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:otido2/app_library.dart';
+import 'package:otido2/utils/provider/app_provider.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -8,10 +10,16 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeData appTheme = Theme.of(context);
+
     wFlex flex = wFlex(context, 30);
+
     final sysOverlayStyle = Theme.of(context).brightness == Brightness.light
         ? SystemUiOverlayStyle.dark
         : SystemUiOverlayStyle.light;
+
+    final appProvider = Provider.of<AppProvider>(context);
+    appProvider.loadPreferences();
+
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: sysOverlayStyle,

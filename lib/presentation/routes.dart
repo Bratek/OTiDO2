@@ -1,7 +1,7 @@
 import 'package:otido2/app_library.dart';
 
 final routes = {
-  '/': (context) => const AuthorizationScreen(),
+  //ß'/': (context) => const AuthorizationScreen(),
   '/splash': (context) => const SplashScreen(),
   '/login': (context) => const LoginScreen(),
   '/registation': (context) => const RegistrationScreen(),

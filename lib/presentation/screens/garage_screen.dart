@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:otido2/app_library.dart';
-import 'package:otido2/data/data_sources/db.dart';
-//import 'package:otido2/widgets/widget_tile_car.dart';
+import 'package:otido2/data/models/global.dart';
+import 'package:provider/provider.dart';
+
 
 class GarageScreen extends StatefulWidget {
   const GarageScreen({super.key});
@@ -14,9 +15,9 @@ class _GarageState extends State<GarageScreen> {
   @override
   Widget build(BuildContext context) {
     ThemeData appTheme = Theme.of(context);
-    DB db = DB();
+    final db = DB();
     List carList = db.getCarList();
-
+    final globalCar = Provider.of<Global>(context).car;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -35,7 +36,7 @@ class _GarageState extends State<GarageScreen> {
           itemCount: carList.length,
           itemBuilder: (context, index) {
             Car currentCar = carList[index];
-            final currentColor = (index == Global.car.id
+            final currentColor = (index == globalCar.id
                 ? appTheme.colorScheme.accentColor
                 : appTheme.colorScheme.previousColor);
             return Padding(
@@ -70,7 +71,7 @@ class _GarageState extends State<GarageScreen> {
                                 softWrap: false,
                               ),
                               vSpace(8),
-                              wGosNumber(context, currentCar),
+                              wGosNumber(context, carParam:  currentCar),
                             ],
                           ),
                         ),

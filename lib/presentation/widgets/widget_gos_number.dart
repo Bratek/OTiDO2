@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:otido2/app_library.dart';
+import 'package:otido2/utils/provider/app_provider.dart';
+import 'package:provider/provider.dart';
 
-Widget wGosNumber(BuildContext context, Car? car) {
-  if (car == null) car = Car();
+Widget wGosNumber(BuildContext context, {Car? carParam}) {
+  Car? car;
+  if (carParam == null) {
+    car = Provider.of<AppProvider>(context).global.car;
+  } else {
+    car = carParam;
+  }
 
   return Container(
       width: 140,

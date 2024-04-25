@@ -15,8 +15,8 @@ class Car {
     this.id = 0,
     this.brand = '',
     this.model = '',
-    this.gosNumber = '',
-    this.gosRegion = '',
+    this.gosNumber = 'oOOOoo',
+    this.gosRegion = '000',
     this.markaTopliva = '',
     this.limintTopliva = 0.0,
     this.rashodLeto = 0.0,
@@ -38,8 +38,8 @@ class Car {
       id = 0;
       brand = '';
       model = '';
-      gosNumber = '';
-      gosRegion = '';
+      gosNumber = 'oOOOoo';
+      gosRegion = '000';
       markaTopliva = '';
       limintTopliva = 0.0;
       rashodLeto = 0.0;
